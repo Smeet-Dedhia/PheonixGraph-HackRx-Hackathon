@@ -1,5 +1,11 @@
+import Header from "../components/app/Header";
+
 const BajajApp = () => {
-  return <div>Bajaj-App</div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 };
 
 export default BajajApp;
