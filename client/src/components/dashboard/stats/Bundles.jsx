@@ -2,42 +2,8 @@ import cover from "../../../assets/products/cover.png";
 import iphone from "../../../assets/products/iphone.png";
 import charger from "../../../assets/products/charger.png";
 import airpods from "../../../assets/products/airpods.png";
-import React from 'react';
-import DropdownMenu from "../Dropdown";
 
-const best_bundles = [
-  {
-    label: "Phone Case",
-    img: cover,
-  },
-  {
-    label: "iPhone 11",
-    img: iphone,
-  },
-  {
-    label: "Charger",
-    img: charger,
-  },
-  {
-    label: "Airpods Pro",
-    img: airpods,
-  },
-  {
-    label: "Phone Case",
-    img: cover,
-  },
-  {
-    label: "iPhone 11",
-    img: iphone,
-  },
-  {
-    label: "Charger",
-    img: charger,
-  },
-  {
-    label: "Airpods Pro",
-    img: airpods,
-  },
+const products = [
   {
     label: "Phone Case",
     img: cover,
@@ -55,212 +21,6 @@ const best_bundles = [
     img: airpods,
   },
 ];
-
-const books = [
-  {
-    label: "Phone Case",
-    img: cover,
-  },
-  {
-    label: "iPhone 11",
-    img: iphone,
-  },
-  {
-    label: "Charger",
-    img: charger,
-  },
-  {
-    label: "Airpods Pro",
-    img: airpods,
-  },
-  {
-    label: "Phone Case",
-    img: cover,
-  },
-  {
-    label: "iPhone 11",
-    img: iphone,
-  },
-  {
-    label: "Charger",
-    img: charger,
-  },
-  {
-    label: "Airpods Pro",
-    img: airpods,
-  },
-  {
-    label: "Phone Case",
-    img: cover,
-  },
-  {
-    label: "iPhone 11",
-    img: iphone,
-  },
-  {
-    label: "Charger",
-    img: charger,
-  },
-  {
-    label: "Airpods Pro",
-    img: airpods,
-  },
-];
-
-const music = [
-  {
-    label: "Phone Case",
-    img: cover,
-  },
-  {
-    label: "iPhone 11",
-    img: iphone,
-  },
-  {
-    label: "Charger",
-    img: charger,
-  },
-  {
-    label: "Airpods Pro",
-    img: airpods,
-  },
-  {
-    label: "Phone Case",
-    img: cover,
-  },
-  {
-    label: "iPhone 11",
-    img: iphone,
-  },
-  {
-    label: "Charger",
-    img: charger,
-  },
-  {
-    label: "Airpods Pro",
-    img: airpods,
-  },
-  {
-    label: "Phone Case",
-    img: cover,
-  },
-  {
-    label: "iPhone 11",
-    img: iphone,
-  },
-  {
-    label: "Charger",
-    img: charger,
-  },
-  {
-    label: "Airpods Pro",
-    img: airpods,
-  },
-];
-
-const DVD = [
-  {
-    label: "Phone Case",
-    img: cover,
-  },
-  {
-    label: "iPhone 11",
-    img: iphone,
-  },
-  {
-    label: "Charger",
-    img: charger,
-  },
-  {
-    label: "Airpods Pro",
-    img: airpods,
-  },
-  {
-    label: "Phone Case",
-    img: cover,
-  },
-  {
-    label: "iPhone 11",
-    img: iphone,
-  },
-  {
-    label: "Charger",
-    img: charger,
-  },
-  {
-    label: "Airpods Pro",
-    img: airpods,
-  },
-  {
-    label: "Phone Case",
-    img: cover,
-  },
-  {
-    label: "iPhone 11",
-    img: iphone,
-  },
-  {
-    label: "Charger",
-    img: charger,
-  },
-  {
-    label: "Airpods Pro",
-    img: airpods,
-  },
-];
-
-const video = [
-  {
-    label: "Phone Case",
-    img: cover,
-  },
-  {
-    label: "iPhone 11",
-    img: iphone,
-  },
-  {
-    label: "Charger",
-    img: charger,
-  },
-  {
-    label: "Airpods Pro",
-    img: airpods,
-  },
-  {
-    label: "Phone Case",
-    img: cover,
-  },
-  {
-    label: "iPhone 11",
-    img: iphone,
-  },
-  {
-    label: "Charger",
-    img: charger,
-  },
-  {
-    label: "Airpods Pro",
-    img: airpods,
-  },
-  {
-    label: "Phone Case",
-    img: cover,
-  },
-  {
-    label: "iPhone 11",
-    img: iphone,
-  },
-  {
-    label: "Charger",
-    img: charger,
-  },
-  {
-    label: "Airpods Pro",
-    img: airpods,
-  },
-];
-
-
 
 const Bundles = () => {
   return (
@@ -271,13 +31,11 @@ const Bundles = () => {
           <p className="text-sm text-gray-500">Summary</p>
         </div>
 
-      <DropdownMenu />
-
         {/* <p className="text-sm">Category</p> */}
       </div>
 
       <div className="flex gap-4 py-4 px-2">
-        {best_bundles.map((product, id) => (
+        {products.map((product, id) => (
           <div
             key={id}
             className="bg-[#E2EBFC] flex flex-col items-center gap-2 justify-center h-28 w-28 rounded-lg"
