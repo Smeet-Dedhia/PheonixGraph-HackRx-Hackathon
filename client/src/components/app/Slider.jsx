@@ -1,26 +1,60 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
+
+import fixedDeposit from "../../assets/fixed-deposit.png";
 
 function Slider() {
   const slides = [
     {
       css: "#F38800",
-      label: "Bajaj",
+      label: [
+        "Fixed Deposit",
+        "Get high returns of up to 8.60% p.a",
+        "on your investment",
+      ],
+      button: "Open FD",
+      img: fixedDeposit,
     },
     {
       css: "#1D525B",
+      label: ["Motor Insurance", "Save up to 85% on car insurance", "premiums"],
+      button: "Apply Now",
+      img: fixedDeposit,
+    },
+    {
+      css: "##583c3d",
+      label: [
+        "Bajaj Finserv Securities Limited",
+        "Open your Demat & Trading account",
+        "or free",
+      ],
+      button: "Free Account",
+      img: fixedDeposit,
     },
     {
       css: "#0178B7",
+      label: [
+        "Doctor Loan",
+        "Avail funds of up to Rs. 55 lakh with",
+        "quick processing",
+      ],
+      button: "Free Account",
+      img: fixedDeposit,
     },
 
     {
       css: "#a397d8",
+      label: [
+        "Mutual Funds",
+        "Open your free account & start",
+        "in investing with just Rs. 100",
+      ],
+      button: "Free Account",
+      img: fixedDeposit,
     },
-    {},
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -46,8 +80,22 @@ function Slider() {
       <div
         // style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
         style={{ backgroundColor: `${slides[currentIndex].css}` }}
-        className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
-      ></div>
+        className="flex items-center justify-around w-full h-full rounded-2xl bg-center bg-cover duration-500"
+      >
+        <div>
+          {slides[currentIndex].label.map((item, id) => (
+            <div key={id} className="p-2 text-4xl font-semibold text-white">
+              {item}
+            </div>
+          ))}
+
+          <button className="bg-white mx-2 my-2 py-1 rounded-lg px-4 font-semibold ">
+            {slides[currentIndex].button}
+          </button>
+        </div>
+
+        <img src={slides[currentIndex].img} alt="" className="h-80" />
+      </div>
       {/* Left Arrow */}
       <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
         <BsChevronCompactLeft onClick={prevSlide} size={30} />
@@ -61,7 +109,7 @@ function Slider() {
           <div
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
-            className="text-2xl cursor-pointer"
+            className="text-2xl cursor-pointer "
           >
             <RxDotFilled />
           </div>
