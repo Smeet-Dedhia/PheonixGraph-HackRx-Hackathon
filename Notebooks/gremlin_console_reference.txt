@@ -1,0 +1,65 @@
+gremlin> graph = TinkerGraph.open()
+==>tinkergraph[vertices:0 edges:0]
+gremlin> graph.io(graphson()).readGraph('/home/smeet/Downloads/sample (1).json')
+==>null
+gremlin> g = graph.traversal()
+==>graphtraversalsource[tinkergraph[vertices:0 edges:0], standard]
+gremlin> graph.io(graphml()).readGraph('/home/smeet/Downloads/test.graphml')
+GC overhead limit exceeded
+Type ':help' or ':h' for help.
+Display stack trace? [yN]n
+gremlin> graph.io(graphml()).readGraph('/home/smeet/Downloads/test(1).graphml')
+Vertex with id already exists: 1
+Type ':help' or ':h' for help.
+Display stack trace? [yN][An
+gremlin> graph = TinkerGraph.open()
+==>tinkergraph[vertices:0 edges:0]
+gremlin> g = graph.traversal()
+==>graphtraversalsource[tinkergraph[vertices:0 edges:0], standard]
+gremlin> graph.io(graphml()).readGraph('/home/smeet/Downloads/test(1).graphml')
+==>null
+gremlin> g = graph.traversal()
+==>graphtraversalsource[tinkergraph[vertices:10 edges:28], standard]
+gremlin> g.V().valueMap()
+==>{num_categories=[2], avg_rating=[5.0], ASIN=[0827229534], totalreviews=[2], downloadedreviews=[2], title=[Patterns of Preaching], salesrank=[396585], group=[Book]}
+==>{num_categories=[2], avg_rating=[4.5], ASIN=[0738700797], totalreviews=[12], downloadedreviews=[12], title=[Candlemas], salesrank=[168596], group=[Book]}
+==>{num_categories=[1], avg_rating=[5.0], ASIN=[0486287785], totalreviews=[1], downloadedreviews=[1], title=[World War II Allied Fighter Planes Trading Cards], salesrank=[1270652], group=[Book]}
+==>{num_categories=[5], avg_rating=[4.0], ASIN=[0842328327], totalreviews=[1], downloadedreviews=[1], title=[Life Application Bible Commentary], salesrank=[631289], group=[Book]}
+==>{num_categories=[2], avg_rating=[0.0], ASIN=[1577943082], totalreviews=[0], downloadedreviews=[0], title=[Prayers That Avail Much for Business], salesrank=[455160], group=[Book]}
+==>{num_categories=[5], avg_rating=[4.0], ASIN=[0486220125], totalreviews=[17], downloadedreviews=[17], title=[How the Other Half Lives], salesrank=[188784], group=[Book]}
+==>{num_categories=[3], avg_rating=[4.5], ASIN=[B00000AU3R], totalreviews=[3], downloadedreviews=[3], title=[Batik], salesrank=[5392], group=[Music]}
+==>{num_categories=[4], avg_rating=[4.5], ASIN=[0231118597], totalreviews=[15], downloadedreviews=[15], title=[Losing Matt Shepard], salesrank=[277409], group=[Book]}
+==>{num_categories=[1], avg_rating=[0.0], ASIN=[1859677800], totalreviews=[0], downloadedreviews=[0], title=[Making Bread], salesrank=[949166], group=[Book]}
+==>{num_categories=[3], avg_rating=[4.0], ASIN=[0375709363], totalreviews=[6], downloadedreviews=[6], title=[The Edward Said Reader], salesrank=[220379], group=[Book]}
+gremlin> g.E().valueMap()
+==>{}
+==>{weight=0.13333333333333333}
+==>{}
+==>{}
+==>{weight=0.06666666666666667}
+==>{weight=0.07142857142857142}
+==>{}
+==>{weight=0.14285714285714285}
+==>{}
+==>{weight=0.06666666666666667}
+==>{weight=0.06666666666666667}
+==>{weight=0.058823529411764705}
+==>{}
+==>{weight=0.15384615384615385}
+==>{weight=0.13333333333333333}
+==>{}
+==>{}
+==>{weight=0.21428571428571427}
+==>{}
+==>{weight=0.14285714285714285}
+==>{weight=0.2}
+==>{}
+==>{weight=0.11764705882352941}
+==>{}
+==>{weight=0.1875}
+==>{weight=0.3076923076923077}
+==>{}
+==>{weight=0.14285714285714285}
+gremlin> 
+
+
