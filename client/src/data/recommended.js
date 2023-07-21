@@ -15,21 +15,21 @@ export const recommended = [
     recommended: [
       {
         id: 2,
-        pic: ac,
+        pic: chair,
         title: "ABC Recliner",
         price: 25000,
         rating: 5,
       },
       {
         id: 2,
-        pic: ac,
+        pic: chair,
         title: "ABC Recliner",
         price: 25000,
         rating: 5,
       },
       {
         id: 2,
-        pic: ac,
+        pic: chair,
         title: "ABC Recliner",
         price: 25000,
         rating: 5,
@@ -42,6 +42,29 @@ export const recommended = [
     title: "Matress",
     price: 2000,
     rating: 5,
+    recommended: [
+      {
+        id: 2,
+        pic: chair,
+        title: "ABC Recliner",
+        price: 25000,
+        rating: 5,
+      },
+      {
+        id: 2,
+        pic: chair,
+        title: "ABC Recliner",
+        price: 25000,
+        rating: 5,
+      },
+      {
+        id: 2,
+        pic: chair,
+        title: "ABC Recliner",
+        price: 25000,
+        rating: 5,
+      },
+    ],
   },
   {
     id: 3,
@@ -49,6 +72,29 @@ export const recommended = [
     title: "Wireless Speaker",
     price: 30000,
     rating: 3,
+    recommended: [
+      {
+        id: 2,
+        pic: chair,
+        title: "ABC Recliner",
+        price: 25000,
+        rating: 5,
+      },
+      {
+        id: 2,
+        pic: chair,
+        title: "ABC Recliner",
+        price: 25000,
+        rating: 5,
+      },
+      {
+        id: 2,
+        pic: chair,
+        title: "ABC Recliner",
+        price: 25000,
+        rating: 5,
+      },
+    ],
   },
   {
     id: 4,
@@ -56,6 +102,29 @@ export const recommended = [
     title: "GO Pro Hero09",
     price: 3600,
     rating: 3.5,
+    recommended: [
+      {
+        id: 2,
+        pic: chair,
+        title: "ABC Recliner",
+        price: 25000,
+        rating: 5,
+      },
+      {
+        id: 2,
+        pic: chair,
+        title: "ABC Recliner",
+        price: 25000,
+        rating: 5,
+      },
+      {
+        id: 2,
+        pic: chair,
+        title: "ABC Recliner",
+        price: 25000,
+        rating: 5,
+      },
+    ],
   },
   {
     id: 5,
@@ -63,6 +132,29 @@ export const recommended = [
     title: "Ergonomic Chair",
     price: 10000,
     rating: 4.5,
+    recommended: [
+      {
+        id: 2,
+        pic: chair,
+        title: "ABC Recliner",
+        price: 25000,
+        rating: 5,
+      },
+      {
+        id: 2,
+        pic: cam,
+        title: "ABC Recliner",
+        price: 25000,
+        rating: 5,
+      },
+      {
+        id: 2,
+        pic: speaker,
+        title: "ABC Recliner",
+        price: 25000,
+        rating: 5,
+      },
+    ],
   },
   {
     id: 6,
@@ -70,5 +162,28 @@ export const recommended = [
     title: "Earphone BT",
     price: 25000,
     rating: 4,
+    recommended: [
+      {
+        id: 2,
+        pic: speaker,
+        title: "ABC Recliner",
+        price: 25000,
+        rating: 5,
+      },
+      {
+        id: 2,
+        pic: chair,
+        title: "ABC Recliner",
+        price: 25000,
+        rating: 5,
+      },
+      {
+        id: 2,
+        pic: cam,
+        title: "ABC Recliner",
+        price: 25000,
+        rating: 5,
+      },
+    ],
   },
 ];

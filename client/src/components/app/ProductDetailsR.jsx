@@ -11,7 +11,7 @@ const ProductDetailsR = () => {
   console.log(reqP);
 
   return (
-    <div className="max-w-md mx-auto h-screen border-x border-gray-300">
+    <div className="max-w-md mx-auto h-content border-x border-gray-300">
       <header className="flex justify-center items-center p-3 bg-[#022a52] mb-8">
         <Link to="/app">
           <img src={logo} alt="" />{" "}
@@ -28,6 +28,21 @@ const ProductDetailsR = () => {
             {reqP[0].rating}
           </p>
         </div>
+      </div>
+
+      {/* recommendations  */}
+      <h2 className="my-12 text-2xl font-semibold mx-6">Similar Products</h2>
+      <div className="grid grid-cols-3">
+        {reqP[0].recommended.map((rec) => (
+          <div
+            key={rec.id}
+            className="flex flex-col justify-around items-center text-sm font-semibold py-6 h-54 gap border border-zinc-300 "
+          >
+            <img src={rec.pic} alt="" className="w-24" />
+            <p>{rec.title}</p>
+            <p className="text-xs font-medium text-zinc-500">Rs.{rec.price}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
