@@ -1,8 +1,9 @@
-import { ChartComp } from "./stats/Chart";
 import Header from "./Header";
-import Bundles from "./stats/Bundles";
-import { Line } from "./stats/Line";
-import { Table } from "./stats/Table";
+import { ChartComp } from "../dashboard/stats/Chart";
+import Bundles from "../dashboard/stats/Bundles";
+import { Line } from "../dashboard/stats/Line";
+import { Table } from "../dashboard/stats/Table";
+
 const Main = () => {
   return (
     <div className=" w-5/6">
@@ -16,8 +17,7 @@ const Main = () => {
           <ChartComp />
         </div>
       </section>
-      <br>
-      </br>
+      <br></br>
       <section className="flex justify-center gap-4  my-4 mx-0">
         <div>
           <Line />

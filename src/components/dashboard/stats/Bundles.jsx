@@ -1,7 +1,7 @@
-import cover from "../../assets/products/cover.png";
-import iphone from "../../assets/products/iphone.png";
-import charger from "../../assets/products/charger.png";
-import airpods from "../../assets/products/airpods.png";
+import cover from "../../../assets/products/cover.png";
+import iphone from "../../../assets/products/iphone.png";
+import charger from "../../../assets/products/charger.png";
+import airpods from "../../../assets/products/airpods.png";
 
 const products = [
   {
