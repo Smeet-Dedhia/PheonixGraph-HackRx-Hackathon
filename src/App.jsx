@@ -1,5 +1,8 @@
+import Sidebar from "./components/Sidebar";
+import Dashboard from "./pages/Dashboard";
+
 const App = () => {
-  return <h1 className="text-3xl font-bold underline">Bajaj Finserv</h1>;
+  return <Dashboard />;
 };
 
 export default App;
