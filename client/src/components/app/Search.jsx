@@ -2,7 +2,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 
 const Search = () => {
   return (
-    <div className="flex items-center w-96  bg-gray-100 drop-shadow-sm rounded-lg px-8 py-1.5">
+    <div className="flex items-center  bg-gray-100 drop-shadow-sm rounded-lg px-8 py-1.5">
       <input
         type="text"
         placeholder="Search..."

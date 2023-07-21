@@ -76,25 +76,25 @@ function Slider() {
   };
 
   return (
-    <div className="max-w-[1600px] h-[380px] w-full m-auto py-4 px-4 relative group">
+    <div className="max-w-[500px] h-[200px] w-full m-auto py-2 px-4 relative group">
       <div
         // style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
         style={{ backgroundColor: `${slides[currentIndex].css}` }}
         className="flex items-center justify-around w-full h-full rounded-2xl bg-center bg-cover duration-500"
       >
-        <div>
+        <div className="mx-2.5">
           {slides[currentIndex].label.map((item, id) => (
-            <div key={id} className="p-2 text-4xl font-semibold text-white">
+            <div key={id} className="p-0.5 text-md font-semibold text-white">
               {item}
             </div>
           ))}
 
-          <button className="bg-white mx-2 my-2 py-1 rounded-lg px-4 font-semibold ">
+          <button className="bg-white my-1.5 py-1 rounded-lg px-3 text-xs font-semibold ">
             {slides[currentIndex].button}
           </button>
         </div>
 
-        <img src={slides[currentIndex].img} alt="" className="h-80" />
+        <img src={slides[currentIndex].img} alt="" className="h-28" />
       </div>
       {/* Left Arrow */}
       <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
@@ -109,7 +109,7 @@ function Slider() {
           <div
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
-            className="text-2xl cursor-pointer "
+            className="text-md cursor-pointer "
           >
             <RxDotFilled />
           </div>
