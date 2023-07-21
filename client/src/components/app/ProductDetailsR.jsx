@@ -1,13 +1,13 @@
 import { Link, useParams } from "react-router-dom";
-import { purchase } from "../../data/purchase";
+import { recommended } from "../../data/recommended";
 import logo from "../../assets/app.png";
 import { AiFillStar } from "react-icons/ai";
 
-const ProductDetails = () => {
+const ProductDetailsR = () => {
   const params = useParams();
   const { id } = params;
 
-  const reqP = purchase.filter((product) => product.id == id);
+  const reqP = recommended.filter((product) => product.id == id);
   console.log(reqP);
 
   return (
@@ -20,7 +20,7 @@ const ProductDetails = () => {
 
       {/* product-details  */}
       <div className="flex flex-col items-center gap-4 mt-20">
-        <img src={reqP[0].pic} alt="" className="h-80" />
+        <img src={reqP[0].pic} alt="" className="px-4" />
         <div className="flex items-center gap-4 ">
           <h2 className="text-2xl font-semibold">{reqP[0].title}</h2>
           <p className="bg-green-200 w-10 flex text-green-600  items-center justify-center py-0.5 border border-green-600 rounded">
@@ -33,4 +33,4 @@ const ProductDetails = () => {
   );
 };
 
-export default ProductDetails;
+export default ProductDetailsR;
