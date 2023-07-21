@@ -1,13 +1,19 @@
 import { Chart } from "react-google-charts";
 
 export const data = [
-  ["Week", "Guest", "User"],
-  ["Week1", 390, 410],
-  ["Week2", 210, 110],
-  ["Week3", 300, 450],
-  ["Week4", 350, 250],
-  ["Week5", 200, 400],
-  ["Week5", 600, 150],
+  ["Month", "Loyal", "Unique"],
+  ["Jan", 400, 200],
+  ["Feb", 400, 200],
+  ["Mar", 200, 100],
+  ["Apr", 80, 110],
+  ["May", 400, 250],
+  ["Jun", 150, 210],
+  ["Jul", 150, 180],
+  ["Aug", 100, 150],
+  ["Sep", 650, 450],
+  ["Oct", 600, 150],
+  ["Nov", 600, 150],
+  ["Dec", 600, 150],
 ];
 
 export const options = {
