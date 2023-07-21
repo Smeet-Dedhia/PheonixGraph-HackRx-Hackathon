@@ -4,17 +4,15 @@ from pydantic import BaseModel
 from networkx.readwrite import json_graph
 import networkx as nx
 import json
+import pandas as pd
+from fastapi.middleware.cors import CORSMiddleware
 
 class Input_Params(BaseModel):
     beam_width: int
     start_node: int
     max_depth: int
 
-
-from fastapi.middleware.cors import CORSMiddleware
-
 app = FastAPI()
-
 origins = ["*"]
 
 app.add_middleware(
@@ -31,7 +29,13 @@ def read_json_file(filename):
     return json_graph.node_link_graph(js_graph)
 
 
-G = read_json_file("/content/graph_with_weights.json")
+G = read_json_file("/filepath/graph_with_weights.json")
+df = pd.read_csv('/filepath/finalpreprocesseddata.csv')
+df = df.dropna()
+df = df.set_index('ID')
+n_neighbors = {i:len(list(G.neighbors(i))) for i in n}
+df['n_neighbors'] = df.index.to_series().map(n_neighbors)
+
 
 
 @app.get("/")
@@ -39,9 +43,31 @@ def home():
     return {"message":"working i guess"}
 
 
-@app.post("/get_translation/")
+@app.post("/best_bundles/")
 def beamsearch(in_params : Input_Params):
-    return {"best_bundle": beam_search(G, in_params.start_node, in_params.beam_width, in_params.max_depth)}
+    return {"best_bundle": best_3_bundles()}
+
+def best_3_bundles():
+    n_neighbors = {i:len(list(G.neighbors(i))) for i in n}
+    df['n_neighbors'] = df.index.to_series().map(n_neighbors)
+    overall_ids = list(df[df['salesrank'] != -1].sort_values( by = ['n_neighbors', 
+                                                               'salesrank', 
+                                                               'avg_rating'], ascending = [False, True, False]).index[:3])
+    overall_bundles = {}
+    for id in overall_ids:
+        overall_bundles[id] = beam_search(G, id, 2, 2)
+    
+    best_bundles = { 0: [],
+                    1: [],
+                    2: []}
+    for key in range(len(overall_bundles.keys())):
+        for idx in range(len(overall_bundles[key])):
+            append_prod = { 'title': G.nodes[ list(overall_bundles.keys())[idx] ]['title'],
+                        'group': G.nodes[ list(overall_bundles.keys())[idx] ]['group']}
+            best_bundles[idx].append(append_prod)
+    
+    return best_bundles
+    
 
 def beam_search(graph, start_node, beam_width, max_depth ):
     beam = [([start_node], 0)]
@@ -69,3 +95,4 @@ def beam_search(graph, start_node, beam_width, max_depth ):
         best_paths.extend(beam)
     
     return best_paths[-1][0]
+
