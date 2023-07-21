@@ -14,16 +14,16 @@ export const options = {
   title: "Activities",
   curveType: "function",
   legend: { position: "right" },
-  colors: ["#E9A0A0", "#9BDD7C"],
+  colors: ["#1C62A7", "#9BDD7C"],
 };
 
 export function ChartComp() {
   return (
     <Chart
-      className="mt-10 rounded-xl"
+      className="rounded-lg"
       chartType="LineChart"
-      width="100%"
-      height="350px"
+      width="120%"
+      height="220px"
       data={data}
       options={options}
     />

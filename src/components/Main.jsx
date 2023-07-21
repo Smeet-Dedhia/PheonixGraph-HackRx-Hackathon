@@ -7,9 +7,13 @@ const Main = () => {
     <div className=" w-5/6">
       <Header />
 
-      <section className="m-4">
-        <Bundles />
-        <ChartComp />
+      <section className="flex justify-center gap-4  my-4 mx-0">
+        <div>
+          <Bundles />
+        </div>
+        <div>
+          <ChartComp />
+        </div>
       </section>
     </div>
   );
