@@ -76,7 +76,7 @@ function Slider() {
   };
 
   return (
-    <div className="max-w-[500px] h-[200px] w-full m-auto py-2 px-4 relative group">
+    <div className="max-w-[600px] h-[200px] w-full m-auto py-2 px-4 relative group">
       <div
         // style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
         style={{ backgroundColor: `${slides[currentIndex].css}` }}
