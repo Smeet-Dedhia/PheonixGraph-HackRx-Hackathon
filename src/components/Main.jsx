@@ -7,8 +7,10 @@ const Main = () => {
     <div className=" w-5/6">
       <Header />
 
-      <Bundles />
-      <ChartComp />
+      <section className="m-4">
+        <Bundles />
+        <ChartComp />
+      </section>
     </div>
   );
 };
