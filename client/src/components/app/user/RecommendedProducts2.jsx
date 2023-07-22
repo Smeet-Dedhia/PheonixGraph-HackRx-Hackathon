@@ -1,5 +1,5 @@
-import { recommended2 } from "../../data/recommended2";
 import { Link } from "react-router-dom";
+import { recommended2 } from "../../../data/recommended2";
 
 const RecommendedProducts = () => {
   return (
@@ -9,7 +9,7 @@ const RecommendedProducts = () => {
         {recommended2.map((product) => (
           <Link
             key={product.id}
-            to={`/recommended2/${product.id}`}
+            to={`/recommended/${product.id}`}
             className="flex  flex-col items-center justify-center bg-white h-44 w-32 rounded-lg m-2"
           >
             <img src={product.pic} alt={product.title} className="w-20" />
