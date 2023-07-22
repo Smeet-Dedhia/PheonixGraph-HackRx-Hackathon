@@ -11,7 +11,7 @@ const ProductDetails2 = () => {
   console.log(reqP);
 
   return (
-    <div className="max-w-md mx-auto h-screen border-x border-gray-300">
+    <div className="max-w-md mx-auto h-screen border-x border-gray-300 bg-[#E3E7F5] text-black">
       <header className="flex justify-center items-center p-3 bg-[#022a52] mb-8">
         <Link to="/app">
           <img src={logo} alt="" />{" "}

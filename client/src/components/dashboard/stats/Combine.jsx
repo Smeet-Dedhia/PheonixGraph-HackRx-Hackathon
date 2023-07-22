@@ -145,7 +145,7 @@ const Combine = () => {
                   chartType="Line"
                   width="120%"
                   height="220px"
-                  data={data}
+                  data={item.data}
                   options={options}
                   // className=""
                 />
