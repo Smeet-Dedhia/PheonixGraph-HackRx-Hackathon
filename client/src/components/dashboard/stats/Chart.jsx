@@ -19,7 +19,7 @@ export const data = [
 export const options = {
   title: "Activities",
   curveType: "function",
-  legend: { position: "right" },
+  legend: { position: "bottom" },
   colors: ["#1C62A7", "#9BDD7C"],
 };
 
@@ -29,7 +29,7 @@ export function ChartComp() {
       className="rounded-lg"
       chartType="LineChart"
       width="120%"
-      height="220px"
+      height="225px"
       data={data}
       options={options}
     />

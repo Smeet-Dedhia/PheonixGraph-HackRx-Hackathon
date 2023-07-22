@@ -2,12 +2,7 @@ import React from "react";
 import { Chart } from "react-google-charts";
 
 export const data = [
-  [
-    "Day",
-    "Apple Smart Watches",
-    "Apple IPads",
-    "Airpods",
-  ],
+  ["Day", "Apple Smart Watches", "Apple IPads", "Airpods"],
   [1, 37.8, 80.8, 41.8],
   [2, 30.9, 69.5, 32.4],
   [3, 25.4, 57, 25.7],

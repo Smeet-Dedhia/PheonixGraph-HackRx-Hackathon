@@ -5,20 +5,70 @@ import airpods from "../../../assets/products/airpods.png";
 
 const products = [
   {
-    label: "Phone Case",
-    img: cover,
+    id: 1,
+    label: "Electronics",
+    list: [
+      {
+        label: "Phone Case",
+        img: cover,
+      },
+      {
+        label: "iPhone 11",
+        img: iphone,
+      },
+      {
+        label: "Charger",
+        img: charger,
+      },
+      {
+        label: "Airpods Pro",
+        img: airpods,
+      },
+    ],
   },
   {
-    label: "iPhone 11",
-    img: iphone,
+    id: 2,
+    label: "Electronics",
+    list: [
+      {
+        label: "Phone Case",
+        img: cover,
+      },
+      {
+        label: "iPhone 11",
+        img: iphone,
+      },
+      {
+        label: "Charger",
+        img: charger,
+      },
+      {
+        label: "Airpods Pro",
+        img: airpods,
+      },
+    ],
   },
   {
-    label: "Charger",
-    img: charger,
-  },
-  {
-    label: "Airpods Pro",
-    img: airpods,
+    id: 3,
+    label: "Electronics",
+    list: [
+      {
+        label: "Phone Case",
+        img: cover,
+      },
+      {
+        label: "iPhone 11",
+        img: iphone,
+      },
+      {
+        label: "Charger",
+        img: charger,
+      },
+      {
+        label: "Airpods Pro",
+        img: airpods,
+      },
+    ],
   },
 ];
 
