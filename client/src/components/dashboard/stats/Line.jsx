@@ -34,6 +34,7 @@ export function Line() {
       height="220px"
       data={data}
       options={options}
+      // className=""
     />
   );
 }

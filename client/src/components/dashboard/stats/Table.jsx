@@ -27,33 +27,33 @@ export function Table() {
               scope="row"
               className="px-6 py-4 font-medium text-black whitespace-nowrap "
             >
-              Apple MacBook Pro 17"
+              Apple Smart Watches
             </th>
             <td className="px-6 py-4">45%</td>
             <td className="px-6 py-4">Laptop</td>
-            <td className="px-6 py-4">$2999</td>
+            <td className="px-6 py-4">Rs. 150000</td>
           </tr>
           <tr className="bg-white border-b">
             <th
               scope="row"
               className="px-6 py-4 font-medium text-black whitespace-nowrap"
             >
-              Microsoft Surface Pro
+              Apple IPads
             </th>
             <td className="px-6 py-4">35%</td>
             <td className="px-6 py-4">Laptop PC</td>
-            <td className="px-6 py-4">$1999</td>
+            <td className="px-6 py-4">Rs. 75000</td>
           </tr>
           <tr className="bg-white ">
             <th
               scope="row"
               className="px-6 py-4 font-medium text-black whitespace-nowrap "
             >
-              Magic Mouse 2
+              Airpods
             </th>
             <td className="px-6 py-4">15%</td>
             <td className="px-6 py-4">Accessories</td>
-            <td className="px-6 py-4">$99</td>
+            <td className="px-6 py-4">Rs. 25000</td>
           </tr>
         </tbody>
       </table>

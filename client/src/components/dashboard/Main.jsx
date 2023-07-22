@@ -4,6 +4,7 @@ import { ChartComp } from "../dashboard/stats/Chart";
 import { Line } from "../dashboard/stats/Line";
 import { Table } from "../dashboard/stats/Table";
 import New from "./stats/New";
+import Combine from "./stats/Combine";
 
 const Main = () => {
   return (
@@ -22,11 +23,12 @@ const Main = () => {
       <br></br>
       <section className="flex justify-center gap-4  my-4 mx-0">
         <div>
-          <Line />
-        </div>
-        <div>
           <Table />
         </div>
+        <div>
+          <Line />
+        </div>
+        {/* <Combine /> */}
       </section>
     </div>
   );
