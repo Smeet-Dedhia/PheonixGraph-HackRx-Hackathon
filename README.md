@@ -34,6 +34,6 @@ This will use Graph Embeddings for the vertices allow for compact representation
 - Multiple metrics (Jaccard and Sorensen-Dice indices) are combined to give robust recommendations within the cluster 
 - Helpfulness - User reviews have been considered to determine which products are more trustworthy (confidence)
 
-See the [PheonixGraph Presentation](/PhoenixGraph-Presentation.pdf) for more details!
+See the [PhoenixGraph Presentation](/PhoenixGraph-Presentation.pdf) for more details!
 
 
